@@ -1,0 +1,64 @@
+﻿@model MVCCrudOdev.Models.Kategori
+
+@{
+    ViewBag.Title = "Sil";
+}
+
+<h2>Kategori Sil</h2>
+
+<h3>Silmek istediğinizden emin misiniz?</h3>
+<div>
+    <h4>Kategori Bilgileri</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KategoriAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KategoriAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KategoriAciklamasi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KategoriAciklamasi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Urun)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Urun)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fiyat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fiyat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Stock)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stock)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Sil" class="btn btn-default" /> |
+            @Html.ActionLink("Listeye Dön", "Index")
+        </div>
+    }
+</div>
